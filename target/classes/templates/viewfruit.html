@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Fruit Started: Serving Web Content</title>
+
+	<head th:replace="~{layout :: head}">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+
+<body>
+	<header th:replace="~{layout :: header}"> </header>
+	<div class="container">
+		<form class="box">
+			<div class="field">
+				<label class="label">Fruta</label>
+				<div class="control">
+					<input class="input" type="text" placeholder="Coloque la fruta">
+				</div>
+			</div>
+
+			<button type="submit" class="button is-primary">Buscar</button>
+		</form>
+		<div class="box">
+			<p th:text="'Fruta, ' + ${name} + '!'" />
+			<p th:text="'Nombre: ' + ${starFrutiewtDTO.name} " />
+			<p th:text="'id: ' + ${starFrutiewtDTO.id} " />
+			<p th:text="'Familia:  ' + ${starFrutiewtDTO.family} " />
+			<p th:text="'Orden: ' + ${starFrutiewtDTO.order} " />
+		</div>
+	</div>
+	<br>
+	<br>
+	<footer th:replace="~{layout :: footer}"></footer>
+</body>
+
+</html>
